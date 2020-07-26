@@ -6,21 +6,22 @@ Created on Fri May  8 00:18:26 2020
 """
 
 from setup_demo.main import demo
+import logging
 
 
 def test_square():
     a= demo(3)
-    print(a.squared)
+    logging.info("Squared")
     assert a.squared == 9, "The value should be 9"
 
 def test_cube():
     a= demo(10)
-    print(a.cubed)
+    logging.info("Cubed")
     assert a.cubed == 1000, "The value should be 1000"
 
 def test_factorial():
     a= demo(5)
-    print(a.fact)
+    logging.info("calculated factorial")
     assert a.fact == 120, "The value shaould be 120"
 
 
@@ -28,4 +29,4 @@ if __name__=="__main__":
     test_square()
     test_cube()
     test_factorial()
-    print("Congratulations! all tests are passed!")
+    logging.info("all tests performed")
